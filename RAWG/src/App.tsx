@@ -29,15 +29,12 @@ export const App = () => {
         >
           {transitions((style, item) => (
             <animated.div style={style}>
-              <div style={{}}>
-                {" "}
-                <Routes location={item}>
-                  <Route path="/" element={<Layout />}>
-                    <Route path="/:id" element={<GameIntro />} />
-                    <Route path="/" element={<RenderCards />} />
-                  </Route>
-                </Routes>
-              </div>
+              <Routes location={item}>
+                <Route path="/" element={<Layout />}>
+                  <Route path="/:id" element={<GameIntro />} />
+                  <Route path="/" element={<RenderCards />} />
+                </Route>
+              </Routes>
             </animated.div>
           ))}
         </main>
